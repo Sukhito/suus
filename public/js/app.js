@@ -1,4 +1,4 @@
-var app = angular.module('suus',['ui.router','ui.bootstrap']);
+var app = angular.module('suus',['ui.router','ui.bootstrap','focus-if']);
 
 app.config(function($stateProvider,$urlRouterProvider,$locationProvider){
     $urlRouterProvider.otherwise('/');
