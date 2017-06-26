@@ -1,0 +1,47 @@
+<div class="col-md-8 col-md-offset-2">
+<div classs="row">
+    <button class="btn btn-success" type="button" ui-sref="items()">Home</button>
+    <button class="btn btn-primary" type="button" ng-click="edit()">Edit</button>
+</div>
+<div class="row">
+	<div>
+		<table class="table">
+			<tr>
+				<td>Name</td>
+				<td>{{item.name}}</td>
+			</tr>
+			<tr>
+				<td>Isi</td>
+				<td>{{item.dimension}}</td>
+			</tr>
+			<tr>
+				<td>Modal</td>
+				<td>{{item.modal}}</td>
+			</tr>
+			<tr>
+				<td>Keterangan Modal</td>
+				<td>                
+					<ul style="list-style-type: none;margin: 0;padding: 0;">
+						<li ng-repeat="ketmod in section(item.ketmodal)">{{ketmod}}</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>Harga</td>
+				<td>
+					<ul>
+						<li ng-repeat="price in item.prices">
+							{{price.nominal}}/{{price.unit}}
+						</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>Keterangan Jual</td>
+				<td>{{item.ketjual}}</td>
+			</tr>
+		</table>	
+	</div>
+
+</div>
+</div>
