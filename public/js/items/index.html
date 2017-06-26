@@ -1,6 +1,8 @@
 <button class="btn btn-primary" ui-sref="nav">home</button>
 
-<input ng-model="search.name"><button class="btn btn-success" ng-click="newItem()">Tambah Barang</button>
+<input ng-model="search.name" autofocus>
+
+<button class="btn btn-success" ng-click="newItem()">Tambah Barang</button>
 
 <table class="table table-hover table-nonfluid small">
     <tr ng-repeat="item in items|filter:search|limitTo:30"  ui-sref="item({itemId:item._id})">
