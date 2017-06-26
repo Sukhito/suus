@@ -1,4 +1,4 @@
-var Item = require('./models/items');
+var Item = require('../model/item');
 
 module.exports = function(app){
     app.get('/api/items',function(req,res){
